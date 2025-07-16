@@ -17,12 +17,12 @@ const products = [
   {
     brand: 'AIBRIDGE PROMPT KIT',
     name: 'GPT 프롬프트 자동화 키트',
-    image: '/img/product02.png',
+    image: '/img/product03.png',
   },
   {
     brand: 'AIBRIDGE AI TOOL',
     name: 'AI 제안서 생성기 SaaS',
-    image: '/img/product03.png',
+    image: '/img/product02.png',
   },
 ];
 
