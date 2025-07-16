@@ -31,7 +31,7 @@ const stories = [
 
 export default function NewsStoriesSection() {
   return (
-    <section className="max-w-[1600px] mx-auto px-6 py-[100px]">
+    <section className="max-w-[1600px] mx-auto px-6 py-[100px] bg-white">
       <h2 className="text-3xl font-bold text-center mb-4">INSIGHT & WORKLOG</h2>
       <p className="text-center text-gray-500 text-base mb-12">
         AI, 창작, 그리고 프로덕션 작업의 모든 과정과 관점을 기록합니다.
