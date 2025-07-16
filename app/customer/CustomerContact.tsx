@@ -2,7 +2,7 @@
 
 export default function CustomerContact() {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="max-w-[1440px] mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white">
       {/* Left: 텍스트 + 이미지 */}
       <div className="space-y-10">
         {/* 텍스트 */}
