@@ -48,26 +48,30 @@ export default function InsightContent() {
   const [posts, setPosts] = useState<Post[]>(staticPosts);
 
   useEffect(() => {
-    // Supabase 환경변수 존재 시만 데이터 fetch
-    const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    try {
+      const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-    if (SUPABASE_URL && SUPABASE_KEY) {
-      const { createClient } = require('@supabase/supabase-js');
-      const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+      if (SUPABASE_URL && SUPABASE_KEY) {
+        const { createClient } = require('@supabase/supabase-js');
+        const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-      const fetchPosts = async () => {
-        const { data, error } = await supabase
-          .from('insight_posts')
-          .select('*')
-          .order('created_at', { ascending: false });
+        const fetchPosts = async () => {
+          const { data, error } = await supabase
+            .from('insight_posts')
+            .select('*')
+            .order('created_at', { ascending: false });
 
-        if (!error && data) {
-          setPosts(data);
-        }
-      };
+          if (!error && data) {
+            setPosts(data);
+          }
+        };
 
-      fetchPosts();
+        fetchPosts();
+      }
+    } catch (error) {
+      // Supabase 모듈 없음 or env 누락 시 무시
+      console.warn('Supabase 비활성 상태:', error);
     }
   }, []);
 
@@ -77,7 +81,10 @@ export default function InsightContent() {
       <div className="md:col-span-2 space-y-8">
         <ul className="space-y-6">
           {posts.map((post) => (
-            <li key={post.id} className="flex flex-col md:flex-row gap-5 bg-[#f8f9fa] p-4 rounded-md shadow-sm">
+            <li
+              key={post.id}
+              className="flex flex-col md:flex-row gap-5 bg-[#f8f9fa] p-4 rounded-md shadow-sm"
+            >
               <div className="w-full md:w-80 h-52 md:h-60 flex-shrink-0 bg-gray-200 overflow-hidden rounded">
                 <Image
                   src={post.thumbnail_url || '/img/default.png'}
@@ -85,6 +92,7 @@ export default function InsightContent() {
                   width={320}
                   height={240}
                   className="w-full h-full object-cover"
+                  unoptimized
                 />
               </div>
               <div className="flex-1">
@@ -102,7 +110,7 @@ export default function InsightContent() {
         </ul>
       </div>
 
-      {/* Right: 사이드바 디자인 유지 */}
+      {/* Right: 사이드바 */}
       <aside className="bg-gray-50 space-y-6 p-8 hidden md:block rounded-lg shadow-sm">
         <div>
           <h5 className="font-bold mb-2">🔍 Search</h5>

@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  trailingSlash: true,
   images: {
-    unoptimized: true, // <-- 추가
+    unoptimized: true, // export 모드에서 최적화 비활성화
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
