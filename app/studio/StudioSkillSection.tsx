@@ -14,7 +14,7 @@ export default function SkillSection() {
               <h2 className="text-3xl font-bold leading-tight mb-4">
                 사용하는 기술과 도구 <br />작업에 적용되는 환경
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 기획, 디자인, 개발, 배포, 자동화까지 전 과정을 스튜디오 체제로 운영합니다.
                 <br />
                 아래 도구들은 다양한 프로젝트에 직접 적용하며 검증한 실전형 기술 스택입니다.
@@ -58,7 +58,7 @@ export default function SkillSection() {
                     />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                  <p className="text-gray-800 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
