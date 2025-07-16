@@ -57,7 +57,6 @@ export default function ProductSlider() {
         </div>
         <div className="text-sm font-semibold">{product.brand}</div>
         <div className="text-base">{product.name}</div>
-        <div className="text-lg font-bold">{product.price}</div>
       </div>
     </SwiperSlide>
   ))}
