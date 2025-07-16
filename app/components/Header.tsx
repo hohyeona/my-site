@@ -71,11 +71,11 @@ useEffect(() => {
       </header>
 
       {/* 모바일 사이드 메뉴 */}
-      <div
-        className={`fixed top-0 left-0 h-full w-[250px] bg-zinc-900 text-white pt-30 p-6 z-40 transform transition-transform duration-300 md:hidden ${
-          menuOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
+<div
+  className={`fixed inset-0 bg-white z-40 p-6 transition-transform duration-300 transform ${
+    mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
         <nav className="flex flex-col gap-4">
           <Link href="/about" onClick={() => setMenuOpen(false)}>회사소개</Link>
           <Link href="/studio" onClick={() => setMenuOpen(false)}>스튜디오</Link>
