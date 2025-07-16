@@ -3,7 +3,7 @@
 import InsightSection from './InsightSection';
 import InsightContent from './InsightContent';
 
-export default function Insightpage() {
+export default function InsightPage() {
   return (
     <>
       <InsightSection />

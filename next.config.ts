@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
-    unoptimized: true, // export 모드에서 최적화 비활성화
+    unoptimized: true, // Image optimization API 제거
   },
-};
+  // typedRoutes 제거도 필요하다면
+  experimental: {
+    typedRoutes: false,
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
