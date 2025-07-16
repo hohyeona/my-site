@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           referrerPolicy="no-referrer"
         />
       </head>      
-      <body>
+      <body className="bg-white">
         <Header />
         <div className="pt-[80px] min-h-screen flex flex-col">
           <main className="flex-grow">{children}</main>
