@@ -3,7 +3,7 @@
 export default function FeatureSection() {
   return (
     <section className="py-20 px-4">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white">
         {/* 왼쪽 컬럼 */}
         <div>
           <h2 className="text-3xl font-bold mb-6">제공 서비스</h2>
