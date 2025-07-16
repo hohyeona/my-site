@@ -36,7 +36,7 @@ const posts = [
 
 export default function InsightContent() {
   return (
-    <div className="max-w-[1300px] mx-auto px-4 py-30 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div className="max-w-[1300px] mx-auto px-4 py-30 grid grid-cols-1 md:grid-cols-3 gap-10 bg-white">
       {/* Left: 게시글 리스트 */}
       <div className="md:col-span-2 space-y-8">
         <ul className="space-y-6">
