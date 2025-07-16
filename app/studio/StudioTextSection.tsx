@@ -3,7 +3,7 @@
 export default function PortfolioIntroSection() {
   return (
     <section className="py-16 px-4 text-center">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto bg-white">
         <span className="text-sm text-gray-500 uppercase tracking-widest mb-2 block">
           아이디어를 실현 가능한 결과물로 바꿉니다
         </span>
